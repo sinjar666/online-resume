@@ -29,6 +29,7 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
+//Import ng2-fullpage for fullpage.js
 import { MnFullpageDirective, MnFullpageService } from "ng2-fullpage";
 
 
@@ -57,17 +58,17 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
-    XLargeDirective
+    XLargeDirective,
+    MnFullpageDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
-    FormsModule,
-    HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    MnFullpageService
   ]
 })
 export class AppModule {
