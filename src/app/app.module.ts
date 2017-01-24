@@ -63,6 +63,7 @@ type StoreType = {
   ],
   imports: [ // import Angular's modules
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
