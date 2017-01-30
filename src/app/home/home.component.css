@@ -52,18 +52,14 @@ abbr,acronym { border: 0;
 .fullpage-wrapper{
 	font-family: arial,helvetica;
 	color: #fff;
-
+    padding: 0;
+    margin: 0;
     background: #34e89e; /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #34e89e , #0f3443); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #34e89e , #0f3443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-.wrap{
-	margin-left: auto;
-	margin-right: auto;
-	width: 960px;
-	position: relative;
-}
+
 h1{
 	font-size: 6em;
 }
@@ -73,11 +69,4 @@ p{
 
 .section{
 	text-align:center;
-}
-
-
-.code{
-	background: rgba(255,255,255,0.7);
-	padding: 0px 5px;
-	line-height: 25px;
 }
