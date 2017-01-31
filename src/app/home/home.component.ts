@@ -9,7 +9,6 @@ import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
 
-//import { Component, Input, Output, ViewEncapsulation } from '@angular/core';
 import { MnFullpageService, MnFullpageOptions } from "ng2-fullpage";
 
 @Component({
@@ -34,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   //FullPage.js configuration
   @Input() public options: MnFullpageOptions = new MnFullpageOptions({
-        controlArrows: true,
+        controlArrows: false,
         scrollingSpeed: 700,
 
         menu: '.menu',
@@ -46,9 +45,7 @@ export class HomeComponent implements OnInit {
 
   // Set our default values
   public localState = { value: '' };
-
   
-
   // TypeScript public modifiers
   constructor(
     public appState: AppState,
