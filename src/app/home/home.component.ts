@@ -1,11 +1,16 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  Input,
+  Output
 } from '@angular/core';
 
 import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
+
+//import { Component, Input, Output, ViewEncapsulation } from '@angular/core';
+import { MnFullpageService, MnFullpageOptions } from "ng2-fullpage";
 
 @Component({
   // The selector is what angular internally uses
@@ -14,7 +19,8 @@ import { XLargeDirective } from './x-large';
   selector: 'home',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
   providers: [
-    Title
+    Title,
+    MnFullpageService
   ],
   // Our list of styles in our component. We may add more to compose many styles together
   styles: [
@@ -25,12 +31,29 @@ import { XLargeDirective } from './x-large';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+
+  //FullPage.js configuration
+  @Input() public options: MnFullpageOptions = new MnFullpageOptions({
+        controlArrows: true,
+        scrollingSpeed: 700,
+
+        menu: '.menu',
+        css3: true,
+        anchors: [
+            'home', 'about', 'cert', 'work', 'contact'
+        ]
+    });
+
   // Set our default values
   public localState = { value: '' };
+
+  
+
   // TypeScript public modifiers
   constructor(
     public appState: AppState,
-    public title: Title
+    public title: Title,
+    private fullpageService: MnFullpageService
   ) { }
 
   public ngOnInit() {

@@ -3,7 +3,7 @@ html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a.active {
+li.active {
   background-color: rgba(0,0,0,0.5)
 }
 
@@ -57,6 +57,9 @@ a.active {
 }
 .menu li a.about:before {
   content: "\f007";
+}
+.menu li a.home:before {
+  content: "\f015"
 }
 
 .menu-bar li a:hover,

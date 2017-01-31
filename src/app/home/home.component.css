@@ -70,3 +70,20 @@ p{
 .section{
 	text-align:center;
 }
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+   h1 { font-size: 2em; }
+   p { font-size: 0.66em; }
+
+}
+
+/*@media only screen and (max-width: 320px) {
+
+   h1 { font-size: 2em; }
+   p { font-size: 0.5em; }
+
+}*/
