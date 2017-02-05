@@ -1,16 +1,14 @@
 <div class="fullpage-wrapper">
-    <div mnFullpage [mnFullpage]="options" 
-                    [mnFullpageNavigation]="true" 
-                    [mnFullpageKeyboardScrolling]="true" 
-                    [mnFullpageSlidesNavigation]="true">
+    <div mnFullpage [mnFullpage]="options" [mnFullpageNavigation]="true" [mnFullpageKeyboardScrolling]="true" [mnFullpageSlidesNavigation]="true">
 
         <div class="section fp-section fp-table">
             <div class="fp-tableCell">
-                <h1>Srijan Mukherjee</h1>
-                <p>Tech evangelist and Full stack developer</p>
+                <h1 class="wordwrap">Srijan Mukherjee</h1>
+                <br>
+                <p class="wordwrap">Tech evangelist and Full stack developer</p>
             </div>
         </div>
-         <div class="section fp-section fp-table">
+        <div class="section fp-section fp-table">
             <div class="fp-tableCell"> About</div>
         </div>
         <div class="section fp-section fp-table">
@@ -26,4 +24,9 @@
             <div class="fp-tableCell"> Some section 5</div>
         </div>-->
     </div>
+    <a><i class="fa fa-chevron-down arrow bounce" 
+         [@aidsVisibleState] = "aidsVisible"
+         (click) = "nextPage()">
+    </i>
+    </a>
 </div>
