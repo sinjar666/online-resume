@@ -1,10 +1,10 @@
 import {Component, Input} from '@angular/core';
 
-import {SlideImage} from './slideimage.interface';
+import {CarouselSlideImage} from './slideimage.interface';
 
 @Component({
     selector: 'carousel',
-    templateUrl: './carousel.template.html',
+    templateUrl: './carousel.component.html',
     styles: [
        require('./carousel.component.css')
     ]
@@ -13,5 +13,5 @@ import {SlideImage} from './slideimage.interface';
 export class CarouselComponent {
     
     @Input()
-    public slides: SlideImage[];
+    public slides: CarouselSlideImage[];
 }

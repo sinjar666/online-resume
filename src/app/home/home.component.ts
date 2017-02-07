@@ -13,6 +13,7 @@ import {
 import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
+import { CarouselSlideImage } from 'carousel/slideimage.interface';
 
 import { MnFullpageService, MnFullpageOptions } from "ng2-fullpage";
 
@@ -70,6 +71,8 @@ export class HomeComponent implements OnInit {
     this.aidsVisible = "invisible";
     this.fullpageService.moveSectionDown();
   }
+
+  private slideImages: CarouselSlideImage[];
 
   // TypeScript public modifiers
   constructor(

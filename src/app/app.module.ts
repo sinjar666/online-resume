@@ -25,9 +25,11 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
+import { CarouselComponent } from './carousel' 
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
+import { CarouselSlideImage } from './carousel';
 
 //Import ng2-fullpage for fullpage.js
 import { MnFullpageDirective, MnFullpageService } from "ng2-fullpage";
@@ -57,6 +59,7 @@ type StoreType = {
     AppComponent,
     AboutComponent,
     HomeComponent,
+    CarouselComponent,
     NoContentComponent,
     XLargeDirective,
     MnFullpageDirective
