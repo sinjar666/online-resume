@@ -63,6 +63,10 @@ abbr,acronym { border: 0;
 h1{
 	font-size: 6em;
 }
+
+h2{
+    font-size: 3em;
+}
 p{
 	font-size: 2em;
 }
@@ -82,14 +86,26 @@ p{
 /*Override Bootstrap CSS*/
 .carousel-caption   {
     position: relative;
-    left: -30px;
-    top: 20px;
+    bottom: 0px;
 }
 
-.slideshow  {
-    display: inline-block;
-    height: 100%;
+/*.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+    top:50%;
+    transform: translateY(-50%);
+}*/
+
+.carousel-inner {
+    top:50%;
+    transform: translateY(-50%);
 }
+
+.carousel-cn {
+  position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
 
 /*Bouncing Arrow*/
 @keyframes bounce {
