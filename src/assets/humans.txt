@@ -3,7 +3,7 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Srijan Mukherjee -- Full stack developer
 
 # THANKS
 

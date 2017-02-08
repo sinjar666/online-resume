@@ -12,8 +12,20 @@
             <div class="fp-tableCell"> About</div>
         </div>
         <div class="section fp-section fp-table">
-            <div class="fp-tableCell"> 
-                <carousel [slides]="{{certSlides}}"
+            <div class="fp-tableCell">
+                
+                <carousel>
+                    <slide *ngFor="let slide of certSlides">
+                        <a href="{{slide.href}}" target="_blank">
+                            <img src="{{slide.imageUrl}}" alt="" />
+                            <div class="carousel-caption">
+                                <h2>{{slide.title}}</h2>
+                                <p>{{slide.description}}</p>
+                            </div>
+                        </a>
+                    </slide>
+                </carousel>
+                
             </div>
         </div>
         <div class="section fp-section fp-table">
