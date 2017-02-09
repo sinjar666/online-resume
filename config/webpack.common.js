@@ -336,7 +336,7 @@ module.exports = function (options) {
         $: 'jquery',
         jquery: 'jquery'
       })
-
+      
     ],
 
     /*

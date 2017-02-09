@@ -33,7 +33,7 @@ import { CertificationDataService } from "./services/cert.service";
   // Our list of styles in our component. We may add more to compose many styles together
   styles: [
     require('fullpage.js/dist/jquery.fullpage.css'),
-    require('./home.component.css')
+    require('./home.component.scss')
   ],
   animations: [
     trigger('aidsVisibleState', [
