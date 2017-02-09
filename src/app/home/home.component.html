@@ -19,7 +19,7 @@
                             <a [href]="slide.href" target="_blank">
                                 <div class="slide-container">
                                     <div class="carousel-image">
-                                        <img [src]="slide.imageUrl" alt="" />
+                                        <img [srcset]="formatSrcSet(slide.imageSet)" alt="" />
                                     </div>
                                     <div class="carousel-caption">
                                         <h2>{{slide.title}}</h2>

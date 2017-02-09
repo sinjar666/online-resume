@@ -77,6 +77,12 @@ export class HomeComponent implements OnInit {
     this.fullpageService.moveSectionDown();
   }
 
+  public formatSrcSet = (items) => {
+    return items.map(item => {
+      return typeof item === "string" ? item : item.src + " " + item.descriptor;
+    }).join(",");
+  }
+
   // TypeScript public modifiers
   constructor(
     public appState: AppState,

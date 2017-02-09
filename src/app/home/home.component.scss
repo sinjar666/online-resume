@@ -88,12 +88,15 @@ abbr,acronym { border: 0;
         flex-direction: column;
         align-items: center;
         align-content: center;
+        justify-content: space-between;
 
         .carousel-image {
             order: 0;
-            @media only screen and (max-width: 400px)   {
-                img {
-                    max-width: 320px;
+            img {
+                max-height: 70vh;
+                width: auto;
+                @media only screen and (max-width: 320px)   {
+                    max-width: 240px;
                     height: auto;
                 }
             }
@@ -115,38 +118,19 @@ abbr,acronym { border: 0;
     background: linear-gradient(to top, #34e89e , #0f3443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     h1{
-        font-size: 6em;
+        font-size: 10vw;
     }
 
     h2{
-        font-size: 3em;
+        font-size: 5.0vh;
     }
     p{
-        font-size: 2em;
+        font-size: 4vmin;
     }
 
     .section{
         text-align:center;
     }
-
-    /* Begin media tags*/
-
-    @media only screen and (max-width: 512px) {
-
-        h1 { font-size: 4em; }
-        h2 { font-size: 1.2em;}
-        p { font-size: 0.8em; }
-
-    }
-
-    /*TODO: Add more media tags for different screen sizes*/
-
-    /*@media only screen and (max-width: 320px) {
-
-    h1 { font-size: 2em; }
-    p { font-size: 0.5em; }
-
-    }*/         
     
 }
 
