@@ -16,16 +16,19 @@
                 <div class="carousel-cn full-width">
                     <carousel class="slideshow">
                         <slide *ngFor="let slide of certSlides">
-                            <a href="{{slide.href}}" target="_blank">
-                                <img class="img-responsive center-block" [src]="slide.imageUrl" alt="" />
-                                <div class="carousel-caption">
-                                    <h3>{{slide.title}}</h3>
-                                    <p>{{slide.description}}</p>
+                            <a [href]="slide.href" target="_blank">
+                                <div class="slide-container">
+                                    <div class="carousel-image">
+                                        <img [src]="slide.imageUrl" alt="" />
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <h2>{{slide.title}}</h2>
+                                        <br>
+                                        <p>{{slide.description}}</p>
+                                    </div>
                                 </div>
                             </a>
                         </slide>
-                        <i class="fa fa-chevron-left left carousel-control"></i>
-                        <i class="fa fa-chevron-right right carousel-control"></i>
                     </carousel>
                 </div>
             </div>
