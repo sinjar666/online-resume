@@ -14,7 +14,7 @@
         <div class="section fp-section fp-table">
             <div class="fp-tableCell">
                 <div class="carousel-cn full-width">
-                    <carousel class="slideshow">
+                    <carousel class="slideshow" [(activeSlide)]="certActiveSlide">
                         <slide *ngFor="let slide of certSlides">
                             <a [href]="slide.href" target="_blank">
                                 <div class="slide-container">

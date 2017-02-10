@@ -7,7 +7,8 @@ import {
   state,
   style,
   transition,
-  animate
+  animate,
+  EventEmitter
 } from '@angular/core';
 
 import { AppState } from '../app.service';
@@ -68,6 +69,7 @@ export class HomeComponent implements OnInit {
   @Input() public aidsVisible: string;
 
   public certSlides;
+  private _certActiveSlide = 0;
 
   // Set our default values
   public localState = { value: '' };
@@ -81,6 +83,17 @@ export class HomeComponent implements OnInit {
     return items.map(item => {
       return typeof item === "string" ? item : item.src + " " + item.descriptor;
     }).join(",");
+  }
+
+  @Output() certActiveSlideChange = new EventEmitter();
+
+  get certActiveSlide()  {
+    return this._certActiveSlide;
+  }
+
+  set certActiveSlide(val)  {
+    this._certActiveSlide = val;
+    this.certActiveSlideChange.emit(val);
   }
 
   // TypeScript public modifiers
